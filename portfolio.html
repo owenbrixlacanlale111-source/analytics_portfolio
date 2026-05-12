@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lacanlale Owen Brix R. | Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:#e2e8f0;
+        }
+
+        header{
+            background:#1e293b;
+            padding:30px;
+            text-align:center;
+        }
+
+        header img{
+            width:130px;
+            height:130px;
+            border-radius:50%;
+            object-fit:cover;
+            border:3px solid #38bdf8;
+            margin-bottom:10px;
+        }
+
+        header h1{
+            color:#38bdf8;
+            font-size:28px;
+        }
+
+        header p{
+            color:#94a3b8;
+        }
+
+        nav{
+            background:#020617;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:#38bdf8;
+            margin:0 15px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:#facc15;
+        }
+
+        section{
+            padding:40px;
+            max-width:900px;
+            margin:auto;
+        }
+
+        h2{
+            color:#38bdf8;
+            margin-bottom:15px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:20px;
+            margin-bottom:20px;
+            border-radius:10px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:10px;
+            padding:8px 15px;
+            background:#38bdf8;
+            color:black;
+            text-decoration:none;
+            border-radius:5px;
+            font-weight:bold;
+            cursor:pointer;
+            border:none;
+        }
+
+        .btn:hover{
+            background:#0ea5e9;
+        }
+
+        .midterm-card{
+            border-left:4px solid #10b981;
+        }
+
+        .finals-card{
+            border-left:4px solid #f59e0b;
+        }
+
+        #midtermImages img,
+        #finalsImages img{
+            width:90%;
+            border-radius:10px;
+            margin-bottom:15px;
+        }
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:#020617;
+            color:#94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="545371469_1438287250783383_1988595523387322505_n.jpg" alt="My Photo">
+    <h1>Lacanlale Owen Brix R.</h1>
+    <p>Computer Science Student | Future IT Professional</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#midterm">Midterm Activities</a>
+    <a href="#finals">Finals Activities</a>
+</nav>
+
+<section id="about">
+    <h2>Who I Am</h2>
+    <div class="card">
+        <p>
+            My name is Lacanlale Owen Brix R., and I am a Computer Science student in BSCS-C302 at the City College of Angeles.
+            I am passionate about exploring innovative technologies, solving complex problems, and collaborating with others
+            to develop practical solutions.
+        </p>
+        <br>
+        <p>
+            As an ENTJ, I excel in logical reasoning, strategic planning, and envisioning opportunities for growth.
+            I aspire to make a meaningful impact in the IT industry by contributing to advanced and efficient technological solutions.
+        </p>
+        <br>
+        <p>
+            I enjoy learning through hands-on activities, especially projects involving problem solving, data organization,
+            web design, and system development.
+        </p>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="card">
+        <h3>College</h3>
+        <p>Bachelor of Science in Computer Science</p>
+        <p>City College of Angeles</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+        <h3>Technical Skills</h3>
+        <p>HTML, CSS, JavaScript, UI Design</p>
+    </div>
+    <div class="card">
+        <h3>Data Skills</h3>
+        <p>Excel, Pivot Tables, Power Query, Data Analysis</p>
+    </div>
+    <div class="card">
+        <h3>Soft Skills</h3>
+        <p>Problem solving, teamwork, adaptability, strategic thinking</p>
+    </div>
+    <div class="card">
+        <h3>Tools</h3>
+        <p>Microsoft Excel, Power Query, GitHub</p>
+    </div>
+</section>
+
+<!-- MIDTERM -->
+<section id="midterm">
+    <h2>🏆 Midterm Activities</h2>
+    <div class="card midterm-card">
+        <h3>Midterm Activity 1</h3>
+        <button class="btn" onclick="showActivity(1)">Show Midterm Activity 1</button>
+    </div>
+    <div class="card midterm-card">
+        <h3>Midterm Activity 2</h3>
+        <button class="btn" onclick="showActivity(2)">Show Midterm Activity 2</button>
+    </div>
+    <div class="card midterm-card">
+        <h3>Midterm Activity 3</h3>
+        <button class="btn" onclick="showActivity(3)">Show Midterm Activity 3</button>
+    </div>
+
+    <!-- MIDTERM DISPLAY -->
+    <div id="midtermDisplay" class="card" style="display:none; text-align:center;">
+        <h3 id="midtermTitle"></h3>
+        <div id="midtermImages"></div>
+        <a id="midtermExcel" href="#" class="btn" download>📊 Download Excel</a>
+    </div>
+</section>
+
+<!-- FINALS -->
+<section id="finals">
+    <h2>🎯 Finals Activities</h2>
+
+    <!-- ESSAY TASK - NOW WITH BUTTON -->
+    <div class="card finals-card">
+        <h3>📘 Finals Essay Task 1</h3>
+        <p style="margin-top:10px; color:#cbd5e1;">Data Analytics and SQL</p>
+        <button class="btn" onclick="showFinals(1)">Show Essay Task</button>
+    </div>
+
+    <!-- ACTIVITY 2 -->
+    <div class="card finals-card">
+        <h3>Finals Task 2</h3>
+        <p style="margin:10px 0; color:#cbd5e1;">Navigating Power BI</p>
+        <button class="btn" onclick="showFinals(2)">Show Finals Activity 2</button>
+    </div>
+
+    <!-- ACTIVITY 3 -->
+    <div class="card finals-card">
+        <h3>Finals Task 3</h3>
+        <p style="margin:10px 0; color:#cbd5e1;">Time Intelligence Function in Power BI</p>
+        <button class="btn" onclick="showFinals(3)">Show Finals Activity 3</button>
+    </div>
+
+    <!-- ACTIVITY 4 -->
+    <div class="card finals-card">
+        <h3>Finals Task 4</h3>
+        <p style="margin:10px 0; color:#cbd5e1;">Designing Interactive Reports</p>
+        <button class="btn" onclick="showFinals(4)">Show Finals Activity 4</button>
+    </div>
+
+    <!-- FINALS DISPLAY -->
+    <div id="finalsDisplay" class="card" style="display:none; text-align:center;">
+        <h3 id="finalsTitle"></h3>
+        <div id="finalsImages"></div>
+        <a id="finalsFiles" href="#" class="btn" download>📁 Download Finals Files</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Lacanlale Owen Brix R. | BSCS-C302 City College of Angeles</p>
+</footer>
+
+<script>
+function showActivity(n){
+    const titles = [
+        "Midterm Activity 1",
+        "Midterm Activity 2",
+        "Midterm Activity 3"
+    ];
+
+    const images = [
+        ["midterm_act1().png", "midterm_task1.jpg", "act1pic3.jpg"],
+        ["midter_act2_ bikesales.png", "midter_act2.png", "midterm_act2_mostprofitbalemarkets.png"],
+        ["task3.png", "task3c3.png", "taskc2.png", "midtermtask3.png"]
+    ];
+
+    const excels = ["midterm1.xlsx", "midterm2.xlsx", "midterm3.xlsx"];
+
+    document.getElementById("midtermTitle").innerText = titles[n-1];
+    let imageHTML = "";
+    images[n-1].forEach(function(img){
+        imageHTML += `<img src="${img}">`;
+    });
+    document.getElementById("midtermImages").innerHTML = imageHTML;
+    document.getElementById("midtermExcel").href = excels[n-1];
+    document.getElementById("midtermDisplay").style.display = "block";
+    document.getElementById("midtermDisplay").scrollIntoView({behavior:"smooth"});
+}
+
+function showFinals(n){
+    const titles = [
+        "📘 Finals Essay Task 1 - Data Analytics and SQL",
+        "Finals Task 2 - Navigating Power BI",
+        "Finals Task 3 - Time Intelligence Function",
+        "Finals Task 4 - Designing Interactive Reports"
+    ];
+
+    const images = [
+        // Essay Task 1 - ADD YOUR ESSAY IMAGES HERE
+        ["Screenshot essayc1.png", "Screenshot essayc2.png", "Screenshot essayc3.png"], 
+        
+        ["finalstask2c1.jpg", "finalstask2c2.jpg", "final2pic3.jpg"],
+        ["finalstask3c1.png", "final3pic2.jpg", "final3pic3.jpg"],
+        ["finalstask4c1.png", "finalstask4c2.png", "finalstask4c3.png"]
+    ];
+
+    const files = ["essay_task1.pdf", "final2.zip", "final3.zip", "final4.zip"];
+
+    document.getElementById("finalsTitle").innerText = titles[n-1];
+    let imageHTML = "";
+    images[n-1].forEach(function(img){
+        imageHTML += `<img src="${img}">`;
+    });
+    document.getElementById("finalsImages").innerHTML = imageHTML;
+    document.getElementById("finalsFiles").href = files[n-1];
+    document.getElementById("finalsDisplay").style.display = "block";
+    document.getElementById("finalsDisplay").scrollIntoView({behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
